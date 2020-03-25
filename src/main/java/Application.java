@@ -3,19 +3,16 @@ import java.util.*;
 public class Application {
 
     public static void main(String[] args) {
-//        Solution solution = new Solution();
+        Solution012 solution = new Solution012();
 
-//        String str = "abcaeABz";
+        int[] input = {4, 5, 1, 6, 2, 7, 3, 8};
+        int k = 4;
+        ArrayList<Integer> list = solution.GetLeastNumbers_Solution(input,k);
 
-//        System.out.println(solution.sort(str));
+        for (int item : list) {
+            System.out.println(item);
+        }
 
-//        solution.Permutation(str);
-
-        int[] a = {};
-        System.out.println(isEmpty(a));
     }
 
-    public static boolean isEmpty(int[] a){
-        return a.length==0;
-    }
 }
