@@ -3,16 +3,12 @@ import java.util.*;
 public class Application {
 
     public static void main(String[] args) {
-        Solution012 solution = new Solution012();
+        int[][] a = new int[5][4];
+        System.out.println(getString(100));
+    }
 
-        int[] input = {4, 5, 1, 6, 2, 7, 3, 8};
-        int k = 4;
-        ArrayList<Integer> list = solution.GetLeastNumbers_Solution(input,k);
-
-        for (int item : list) {
-            System.out.println(item);
-        }
-
+    public static String getString(int m) {
+        return Integer.toBinaryString(m);
     }
 
 }
