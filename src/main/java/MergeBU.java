@@ -1,8 +1,13 @@
+import edu.princeton.cs.algs4.StdOut;
+
 public class MergeBU {
 
     private static Comparable[] aux;
+    private static int count = 0;
 
     public static void merge(Comparable[] a, int lo, int mid, int hi) {
+        count++;
+        StdOut.println(count + ". Merge(" + lo + "," + mid + "," + hi + ")");
         int i = lo, j = mid + 1;
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
@@ -36,10 +41,13 @@ public class MergeBU {
     }
 
     public static void main(String[] args) {
-        Character[] a = {'M', 'E', 'R', 'G', 'E', 'S', 'O', 'R', 'T', 'E', 'X', 'A', 'M', 'P', 'L', 'E'};
+        Integer[] a = {1, 2, 14, 15, 16, 6, 7, 8, 9, 10,
+            11, 12, 13, 24, 25, 26, 34, 35, 36, 27,
+            21, 22, 23, 17, 3, 4, 5, 28, 29, 30,
+            31, 32, 33, 37, 38, 39, 18, 19, 20};
         sort(a);
-        for (char c : a) {
-            System.out.print(c);
-        }
+//        for (int c : a) {
+//            System.out.println(c);
+//        }
     }
 }
